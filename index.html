@@ -442,20 +442,19 @@
   <script src="gsapScrollTrigger.js"></script>
   <script src="scenery-scroll-animation.js"></script>
 
-<audio id="musica" autoplay loop>
+<audio id="musica" loop>
   <source src="STVAQ.mp3" type="audio/mpeg">
-  Tu navegador no soporta la etiqueta de audio.
 </audio>
 
 <script>
-  // Asegura que la música empiece después de un clic (por restricciones de autoplay)
   window.addEventListener('click', function () {
     const musica = document.getElementById('musica');
     if (musica.paused) {
       musica.play();
     }
-  });
+  }, { once: true });
 </script>
+
 
 
   </body>
